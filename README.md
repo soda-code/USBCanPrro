@@ -37,6 +37,34 @@ dotnet run --project CanUSB/CanUSB.csproj
 
 ---
 
+## 📦 下载与发布
+
+推送到 `v*` 标签时，GitHub Actions 会自动构建并创建 Release：
+
+- 平台：**Windows x64**
+- 形式：**自包含单文件**，目标机器无需安装 .NET 运行时
+- 产物：`CanUSB-v1.0.0-win-x64.zip`，解压后直接双击 `CanUSB.exe` 运行
+
+手动打发布包：
+
+```bash
+dotnet publish CanUSB/CanUSB.csproj ^
+  -c Release -r win-x64 --self-contained true ^
+  -p:PublishSingleFile=true ^
+  -p:IncludeNativeLibrariesForSelfExtract=true ^
+  -p:EnableCompressionInSingleFile=true ^
+  -o publish
+```
+
+发布新版本：
+
+```bash
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+---
+
 ## 📂 项目结构说明
 
 - `Core/`
