@@ -1,0 +1,25 @@
+# 构建产物
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio / Rider 用户文件
+*.user
+*.suo
+.vs/
+.idea/
+
+# 临时预览图
+ui-preview*.png
+icon-preview.png
+chart-preview.png
+
+# VS Code：保留项目配置，忽略本机状态
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
